@@ -40,6 +40,7 @@ python manage.py test
 * Create an API that returns all available tasks for a given user
 
 #### Solution
+- New route `available_tasks_for_user/<int:user_id>/` (including tests in `user`)
 
 ## Notes
 
