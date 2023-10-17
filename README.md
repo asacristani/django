@@ -34,10 +34,12 @@ Unit testing into `user/tests.py`. You can run them with the following command:
 python manage.py test
 ```
 
-**TASK 2**
+### Task 2
 
 * Create an API that returns all users for a given task
 * Create an API that returns all available tasks for a given user
+
+#### Solution
 
 ## Notes
 

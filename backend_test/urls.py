@@ -19,12 +19,8 @@ from django.urls import path
 from rest_framework import routers
 
 from task.views import TaskViewSet
-from user.views import UserViewSet
+from user.views import UserViewSet, available_tasks_for_user_view
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('tasks/', TaskViewSet),
-]
 router = routers.SimpleRouter()
 router.register(r'tasks', TaskViewSet)
 router.register(r'users', UserViewSet)
@@ -32,4 +28,5 @@ router.register(r'users', UserViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('available_tasks_for_user/<int:user_id>/', available_tasks_for_user_view, name='available-tasks-for-user'),
 ]
